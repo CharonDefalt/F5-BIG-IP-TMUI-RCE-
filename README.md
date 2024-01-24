@@ -4,10 +4,10 @@ The Traffic Management User Interface (TMUI) present in F5 BIG-IP versions 15.0.
 
 Also You can send /hsqldb; as GET request and it show you
 
-/////////<html><head><title>HSQL Database Engine Servlet</title>
+
 </head><body><h1>HSQL Database Engine Servlet</h1>
 The servlet is running.<p>
 The database is also running.<p>
 Database name: mem:.<p>
 Queries processed: 0<p>
-</body></html>////////////////
+
